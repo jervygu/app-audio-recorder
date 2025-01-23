@@ -111,6 +111,7 @@ class ViewController: UIViewController {
             audioPlayer = try AVAudioPlayer(contentsOf: audioFilename)
             audioPlayer.delegate = self
             audioPlayer.play()
+            audioPlayer.volume = 5.0
             playButton.setTitle("Stop Playback", for: .normal)
         } catch {
             playButton.isHidden = true
